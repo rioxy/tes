@@ -631,13 +631,12 @@ sed -i '$ i}' /etc/nginx/conf.d/xray.conf
   systemctl enable nginx
   systemctl restart nginx
   systemctl restart xray
-  cd
+
   sleep 5
   reboot
 }
 
 function install_addons{
-    cd
     source <(curl -sL ${myadd}badvpn/setup.sh)
     print_success "Pemasangan badvpn berhasil"
     sleep 2
