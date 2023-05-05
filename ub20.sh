@@ -662,7 +662,6 @@ sudo iptables -A INPUT -p udp --dport 30310 -j ACCEPT
 iptables-save > /etc/iptables/rules.v4
 
     
-    
 }
 
 function install_sc() {
