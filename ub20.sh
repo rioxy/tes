@@ -637,10 +637,7 @@ sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 }
 
 function install_addons{
-    source <(curl -sL ${myadd}badvpn/setup.sh)
-    print_success "Pemasangan badvpn berhasil"
-    sleep 2
-    apt install -y iptables && iptables-persistent && sudo
+apt install -y iptables && iptables-persistent && sudo
     
 sudo iptables -A INPUT -p tcp --dport 433 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
